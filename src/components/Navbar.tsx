@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
                     <Link href="/" className="flex items-center gap-2">
                         <BookKey className="w-6 h-6" />
-                        <span className="text-xl font-bold text-foreground">Zbooks</span>
+                        <span className="text-xl font-bold text-foreground">Gossip Insider</span>
                     </Link>
 
                     <div className="flex items-center gap-2">
@@ -34,7 +34,7 @@ const Navbar = () => {
                         >
                             <Link href="/" className="gap-2">
                                 <BookOpen className="w-4 h-4" />
-                                <span className="hidden sm:inline">Feed</span>
+                                <span className="hidden sm:inline">PDFs</span>
                             </Link>
                         </Button>
 
@@ -49,16 +49,6 @@ const Navbar = () => {
                             </Link>
                         </Button>
 
-                        <Button
-                            variant={isActive("/add-book") ? "default" : "ghost"}
-                            size="sm"
-                            asChild
-                        >
-                            <Link href="/add-book" className="gap-1">
-                                <Plus className="w-4 h-4" />
-                                <span className="hidden sm:inline">Add Book</span>
-                            </Link>
-                        </Button>
 
                         <Button
                             variant={isActive("/library") ? "default" : "ghost"}
@@ -71,13 +61,13 @@ const Navbar = () => {
                             </Link>
                         </Button>
 
-                        <SignedOut>
-                            <SignInButton>
-                                <Button variant={"outline"} size={"sm"}>
-                                    <Link href="/">Sign In</Link>
-                                </Button>
-                            </SignInButton>
-                        </SignedOut>
+                        {/*<SignedOut>*/}
+                        {/*    <SignInButton>*/}
+                        {/*        <Button variant={"outline"} size={"sm"}>*/}
+                        {/*            <Link href="/">Sign In</Link>*/}
+                        {/*        </Button>*/}
+                        {/*    </SignInButton>*/}
+                        {/*</SignedOut>*/}
                         <SignedIn>
                             <UserButton />
                         </SignedIn>
